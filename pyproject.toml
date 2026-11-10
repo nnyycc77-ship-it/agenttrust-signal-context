@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agenttrust-signal-context"
+version = "0.1.0"
+description = "Pre-decision market regime context check for agents, reading the Signal Feed API over x402 on Base"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-core>=0.3",
+    "x402[evm,requests]>=2.0",
+    "requests>=2.31",
+    "eth-account>=0.13",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
